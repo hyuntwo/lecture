@@ -1,0 +1,8 @@
+//d.ts -> declare ts
+export declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      OMDB_API_KEY: string
+    }
+  }
+}
