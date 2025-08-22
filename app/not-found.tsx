@@ -5,25 +5,25 @@ import { useEffect } from 'react'
 
 export default function NotFound() {
   const router = useRouter()
+
   useEffect(() => {
     router.prefetch('/')
+    // eslint-disable-next-line
   }, [])
 
-  function handleCick() {
+  function handleClick() {
+    // await axios('')
     router.push('/')
   }
   return (
     <>
-      <div>NotFound</div>
+      <h1>404 페이지를 찾을 수 없습니다.</h1>
+      <Link href="/">홈으로 이동!(Link)</Link>
       <div
-        onClick={handleCick}
+        onClick={handleClick}
         onMouseEnter={() => router.prefetch('/')}>
-        홈으로
+        홈으로 이동(Push)
       </div>
-      <Link href="/">Home</Link>
     </>
   )
 }
-
-// path: 'movies/:id'
-// segment 다루기 위해 동적 경로
